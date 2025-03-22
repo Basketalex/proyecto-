@@ -1,4 +1,4 @@
- /* Estilos generales */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -6,34 +6,40 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
+body { 
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Header */
+/* Animación de entrada del header */
 header {
     background: #ff4500;
     padding: 20px;
     text-align: center;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: -100px;
     left: 0;
     z-index: 1000;
-    transition: background 0.3s;
+    transition: background 0.3s, top 0.5s ease-out;
+    animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
 }
 
 header.scrolled {
     background: #cc3700;
 }
 
+/* Menú navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -49,16 +55,25 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
     color: #000;
+    transform: scale(1.1);
 }
 
-/* Secciones */
+/* Secciones con efecto fade-in */
 section {
     padding: 60px 10%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Galería */
@@ -74,47 +89,16 @@ section {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, filter 0.3s ease;
     scroll-snap-align: center;
 }
 
 .carrusel img:hover {
     transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-/* Tabla de estadísticas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-}
-
-th {
-    background-color: #ff4500;
-    color: white;
-}
-
-/* Formulario de contacto */
-.contacto form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.contacto input, .contacto textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
+/* Botón de contacto con animación */
 .contacto button {
     background: #ff4500;
     color: white;
@@ -122,11 +106,12 @@ th {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .contacto button:hover {
     background: #cc3700;
+    transform: scale(1.1);
 }
 
 /* Footer */
@@ -136,3 +121,20 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+
+/* Animación para hacer visible las secciones al hacer scroll */
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+
+    function revealSections() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 50) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections(); // Para activar en caso de que ya estén en pantalla
+});
