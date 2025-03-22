@@ -1,145 +1,140 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baloncesto Passion</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8NJ7RXPKY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J8NJ7RXPKY');
-    </script>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #f58d1d;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
-        main {
-            margin-top: 80px;
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a Baloncesto Passion</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#estadisticas">Estadísticas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="historia" class="historia">
-            <h2>Historia del Baloncesto</h2>
-            <p>El baloncesto fue inventado en 1891 por el canadiense James Naismith como una alternativa de invierno para mantener activos a sus alumnos.</p>
-            <p>El deporte ganó rápidamente popularidad y se expandió por las universidades y colegios norteamericanos a principios del siglo XX. En 1936, el baloncesto masculino fue introducido como deporte olímpico en los Juegos Olímpicos de Berlín. Por su parte, el baloncesto femenino se convirtió en deporte olímpico en los Juegos de Montreal 1976.</p>
-        </section>
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-        <section id="noticias" class="noticias">
-            <h2>Últimas Noticias</h2>
-            <article>
-                <h3>Luka Doncic se une a Los Angeles Lakers en un traspaso histórico</h3>
-                <p>En un movimiento sin precedentes, los Los Angeles Lakers han adquirido al esloveno Luka Doncic de los Dallas Mavericks, mientras que Anthony Davis se une al equipo tejano.</p>
-            </article>
-            <article>
-                <h3>Participantes del All-Star 2025 anunciados</h3>
-                <p>La NBA ha desvelado los participantes para los concursos de mates, triples y habilidades del All-Star 2025.</p>
-            </article>
-        </section>
+body { 
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        <section id="galeria" class="galeria">
-            <h2>Galería de Imágenes</h2>
-            <div class="carrusel">
-                <img src="jugador1.jpg" alt="Jugador encestando">
-                <img src="jugador2.jpg" alt="Defensa en acción">
-                <img src="jugador3.jpg" alt="Partido emocionante">
-            </div>
-        </section>
+/* Animación de entrada del header */
+header {
+    background: #ff4500;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: -100px;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s, top 0.5s ease-out;
+    animation: slideDown 1s ease-out forwards;
+}
 
-        <section id="estadisticas" class="estadisticas">
-            <h2>Estadísticas de Jugadores</h2>
-            <table>
-                <tr>
-                    <th>Jugador</th>
-                    <th>Puntos por partido</th>
-                    <th>Rebotes</th>
-                    <th>Asistencias</th>
-                </tr>
-                <tr>
-                    <td>LeBron James</td>
-                    <td>27.1</td>
-                    <td>7.4</td>
-                    <td>7.4</td>
-                </tr>
-                <tr>
-                    <td>Stephen Curry</td>
-                    <td>24.3</td>
-                    <td>4.5</td>
-                    <td>6.5</td>
-                </tr>
-                <tr>
-                    <td>Giannis Antetokounmpo</td>
-                    <td>29.9</td>
-                    <td>11.5</td>
-                    <td>5.9</td>
-                </tr>
-            </table>
-        </section>
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
+}
 
-        <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <p>Si tienes alguna consulta, sugerencia o simplemente quieres saber más sobre el mundo del baloncesto, no dudes en contactarnos.</p>
-        </section>
-    </main>
+header.scrolled {
+    background: #cc3700;
+}
 
-    <footer>
-        <p>2025 Baloncesto Passion. Todos los derechos reservados.</p>
-        <p>Síguenos en:
-            <a href="#">Facebook</a> | 
-            <a href="#">Twitter</a> | 
-            <a href="#">Instagram</a>
-        </p>
-        <p>Contacto: info@baloncestopassion.com</p>
-    </footer>
-</body>
-</html>
+/* Menú navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Secciones con efecto fade-in */
+section {
+    padding: 60px 10%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Galería */
+.carrusel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+}
+
+.carrusel img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.carrusel img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Botón de contacto con animación */
+.contacto button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contacto button:hover {
+    background: #cc3700;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animación para hacer visible las secciones al hacer scroll */
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+
+    function revealSections() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 50) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections(); // Para activar en caso de que ya estén en pantalla
+});
