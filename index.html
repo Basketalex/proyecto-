@@ -2,19 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baloncesto Passion</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS externo -->
-    <script defer src="script.js"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8NJ7RXPKY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J8NJ7RXPKY');
-    </script>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
@@ -30,94 +19,43 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <section id="historia" class="historia">
-            <h2>Historia del Baloncesto</h2>
-            <p>El baloncesto fue inventado en 1891 por el canadiense James Naismith como una alternativa de invierno para mantener activos a sus alumnos.</p>
-            <p>El deporte ganó rápidamente popularidad y se expandió por las universidades y colegios norteamericanos a principios del siglo XX. En 1936, el baloncesto masculino fue introducido como deporte olímpico en los Juegos Olímpicos de Berlín. Por su parte, el baloncesto femenino se convirtió en deporte olímpico en los Juegos de Montreal 1976.</p>
-        </section>
 
-        <section id="noticias" class="noticias">
-            <h2>Últimas Noticias</h2>
-            <article>
-                <h3>Luka Doncic se une a Los Angeles Lakers en un traspaso histórico</h3>
-                <p>En un movimiento sin precedentes, los Los Angeles Lakers han adquirido al esloveno Luka Doncic de los Dallas Mavericks, mientras que Anthony Davis se une al equipo tejano.</p>
-            </article>
-            <article>
-                <h3>Participantes del All-Star 2025 anunciados</h3>
-                <p>La NBA ha desvelado los participantes para los concursos de mates, triples y habilidades del All-Star 2025.</p>
-            </article>
-        </section>
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>Explora el mundo del baloncesto como nunca antes.</p>
+    </section>
 
-        <section id="galeria" class="galeria">
-            <h2>Galería de Imágenes</h2>
-            <div class="carrusel">
-                <img src="jugador1.jpg" alt="Jugador encestando">
-                <img src="jugador2.jpg" alt="Defensa en acción">
-                <img src="jugador3.jpg" alt="Partido emocionante">
-            </div>
-        </section>
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>Desde su invención hasta la actualidad, el baloncesto ha evolucionado increíblemente.</p>
+    </section>
 
-        <section id="estadisticas" class="estadisticas">
-            <h2>Estadísticas de Jugadores</h2>
-            <table>
-                <tr>
-                    <th>Jugador</th>
-                    <th>Puntos por partido</th>
-                    <th>Rebotes</th>
-                    <th>Asistencias</th>
-                </tr>
-                <tr>
-                    <td>LeBron James</td>
-                    <td>27.1</td>
-                    <td>7.4</td>
-                    <td>7.4</td>
-                </tr>
-                <tr>
-                    <td>Stephen Curry</td>
-                    <td>24.3</td>
-                    <td>4.5</td>
-                    <td>6.5</td>
-                </tr>
-                <tr>
-                    <td>Giannis Antetokounmpo</td>
-                    <td>29.9</td>
-                    <td>11.5</td>
-                    <td>5.9</td>
-                </tr>
-            </table>
-        </section>
+    <section id="noticias">
+        <h2>Noticias</h2>
+        <p>Últimas novedades y acontecimientos del mundo del baloncesto.</p>
+    </section>
 
-        <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <p>Si tienes alguna consulta, sugerencia o simplemente quieres saber más sobre el mundo del baloncesto, no dudes en contactarnos.</p>
-            
-            <!-- Formulario agregado -->
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="carrusel">
+            <img src="img1.jpg" alt="Imagen 1">
+            <img src="img2.jpg" alt="Imagen 2">
+            <img src="img3.jpg" alt="Imagen 3">
+        </div>
+    </section>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required><br><br>
+    <section id="estadisticas">
+        <h2>Estadísticas</h2>
+        <p>Datos y análisis de los partidos más recientes.</p>
+    </section>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <button>¡Contáctanos!</button>
+    </section>
 
     <footer>
-        <p>2025 Baloncesto Passion. Todos los derechos reservados.</p>
-        <p>Síguenos en:
-            <a href="#">Facebook</a> | 
-            <a href="#">Twitter</a> | 
-            <a href="#">Instagram</a>
-        </p>
-        <p>Contacto: info@baloncestopassion.com</p>
+        <p>&copy; 2025 Baloncesto Passion. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
-
