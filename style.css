@@ -10,36 +10,23 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
+    padding-top: 100px; /* Espacio para el header fijo */
 }
 
-/* Animación de entrada del header */
+/* Encabezado fijo */
 header {
     background: #ff4500;
     padding: 20px;
     text-align: center;
     position: fixed;
     width: 100%;
-    top: -100px;
+    top: 0;
     left: 0;
     z-index: 1000;
-    transition: background 0.3s, top 0.5s ease-out;
-    animation: slideDown 1s ease-out forwards;
+    transition: background 0.3s;
 }
 
-@keyframes slideDown {
-    from {
-        top: -100px;
-    }
-    to {
-        top: 0;
-    }
-}
-
-header.scrolled {
-    background: #cc3700;
-}
-
-/* Menú navegación */
+/* Menú de navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -63,17 +50,9 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Secciones con efecto fade-in */
+/* Secciones (visibles directamente) */
 section {
     padding: 60px 10%;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Galería */
@@ -98,7 +77,7 @@ section.visible {
     filter: brightness(1.2);
 }
 
-/* Botón de contacto con animación */
+/* Botón de contacto */
 .contacto button {
     background: #ff4500;
     color: white;
