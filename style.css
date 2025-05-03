@@ -122,19 +122,4 @@ footer {
     margin-top: 20px;
 }
 
-/* Animación para hacer visible las secciones al hacer scroll */
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
-
-    function revealSections() {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop < window.innerHeight - 50) {
-                section.classList.add("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealSections);
-    revealSections(); // Para activar en caso de que ya estén en pantalla
-});
+ 
