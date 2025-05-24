@@ -1,72 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Baloncesto Passion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BasketAlex</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Bienvenido a Baloncesto Passion</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#estadisticas">Estadísticas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="pagina">
 
-    <section id="inicio">
-        <h2>Inicio</h2>
-        <p>Explora el mundo del baloncesto como nunca antes.</p>
+  <header class="pagina__header">
+    <h1 class="pagina__titulo">BasketAlex</h1>
+    <nav class="pagina__nav">
+      <ul class="nav__lista">
+        <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#historia" class="nav__link">Historia</a></li>
+        <li class="nav__item"><a href="#noticias" class="nav__link">Noticias</a></li>
+        <li class="nav__item"><a href="#estadisticas" class="nav__link">Estadísticas</a></li>
+        <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina__contenido">
+
+    <section id="inicio" class="seccion seccion--inicio cuadro">
+      <h2 class="seccion__titulo">Inicio</h2>
+      <p class="seccion__texto">
+        Bienvenido a <strong>BasketAlex</strong>, tu destino principal para todo lo relacionado con el baloncesto. Explora noticias, historia, datos curiosos y las mejores jugadas de tus jugadores favoritos.
+      </p>
+      <p class="seccion__texto">
+        Nuestro sitio está diseñado para que disfrutes de una experiencia interactiva, informativa y adaptable desde cualquier dispositivo.
+      </p>
+      <img src="jugador1.jpg" alt="Jugador de baloncesto 1" class="seccion__imagen">
     </section>
 
-    <section id="historia">
-        <h2>Historia</h2>
-        <p>Desde su invención hasta la actualidad, el baloncesto ha evolucionado increíblemente.</p>
+    <section id="historia" class="seccion seccion--historia cuadro">
+      <h2 class="seccion__titulo">Historia</h2>
+      <p class="seccion__texto">
+        El baloncesto fue creado en 1891 por James Naismith. Desde entonces, se ha convertido en un deporte global con ligas de alto nivel como la <em>NBA</em>, <em>Euroliga</em> y otras ligas locales.
+      </p>
+      <p class="seccion__texto">
+        En Ecuador, el crecimiento del baloncesto ha sido constante, con programas juveniles y torneos nacionales que han impulsado el talento local a nuevas alturas.
+      </p>
+      <img src="jugador2.jpg" alt="Jugador de baloncesto 2" class="seccion__imagen">
     </section>
 
-    <section id="noticias">
-        <h2>Noticias</h2>
-        <p>Últimas novedades y acontecimientos del mundo del baloncesto.</p>
+    <section id="noticias" class="seccion seccion--noticias cuadro">
+      <h2 class="seccion__titulo">Noticias</h2>
+      <ul class="seccion__lista">
+        <li>🏀 NBA 2025 comienza con intensos partidos: Warriors dominan la conferencia oeste.</li>
+        <li>🇪🇨 Selección Sub-17 de Ecuador lista para el Sudamericano.</li>
+        <li>🔥 Curry marca 50 puntos en el inicio de temporada.</li>
+        <li>📊 Nueva tecnología para analizar rendimiento en tiempo real se implementa en Ecuador.</li>
+      </ul>
     </section>
 
-    <section id="galeria">
-        <h2>Galería</h2>
-        <div class="carrusel">
-            <img src="img1.jpg" alt="Imagen 1">
-            <img src="img2.jpg" alt="Imagen 2">
-            <img src="img3.jpg" alt="Imagen 3">
-        </div>
+    <section id="estadisticas" class="seccion seccion--estadisticas cuadro">
+      <h2 class="seccion__titulo">Estadísticas</h2>
+      <ul class="seccion__lista">
+        <li>🏆 Michael Jordan: 6 anillos, 30.1 puntos por partido.</li>
+        <li>📈 LeBron James: máximo anotador histórico, 39,000+ puntos.</li>
+        <li>⏱️ Steph Curry: más de 3,500 triples.</li>
+        <li>🎯 Andrés "Chiquito" Zurita: 18.5 puntos por partido (Liga Nacional 2024).</li>
+      </ul>
+      <img src="jugador3.jpg" alt="Jugador de baloncesto 3" class="seccion__imagen">
     </section>
 
-    <section id="estadisticas">
-        <h2>Estadísticas</h2>
-        <p>Datos y análisis de los partidos más recientes.</p>
+    <section id="contacto" class="seccion seccion--contacto cuadro contacto">
+      <h2 class="seccion__titulo">Contacto</h2>
+      <form class="contacto__formulario">
+        <input type="text" placeholder="Tu nombre" class="contacto__input" required>
+        <input type="email" placeholder="Tu correo electrónico" class="contacto__input" required>
+        <textarea placeholder="Escribe tu mensaje" class="contacto__textarea" rows="4" required></textarea>
+        <button type="submit" class="contacto__boton">Enviar mensaje</button>
+      </form>
     </section>
 
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+  </main>
 
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+  <footer class="pagina__footer">
+    <p class="footer__texto">© 2025 BasketAlex. Todos los derechos reservados.</p>
+  </footer>
 
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Baloncesto Passion. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
